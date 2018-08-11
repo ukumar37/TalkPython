@@ -9,3 +9,5 @@ def print_header():
 
 def run_event_loop():
     pass
+
+main()
