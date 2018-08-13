@@ -16,18 +16,27 @@ def run_event_loop():
 
     cmd = None
 
-    while cmd != 'X':
+    while cmd != 'x':
 
-        cmd = input('[L]ist entries, [A]dd an entry, E[X]it: ')
+        cmd = input('[L]ist entries, [A]dd an entry, E[x]it: ')
+        cmd = cmd.lower().strip()
 
-        if cmd.lower().strip() == 'l':
-            print('L')
-        elif cmd.lower().strip() == 'a':
-            print('A')
-        elif cmd.lower().strip() != 'x':
+        if cmd == 'l':
+            list_entries()
+        elif cmd == 'a':
+            add_entry()
+        elif cmd != 'x':
             print("Sorry. We don't understand '{}'.".format(cmd))
 
     print('Done. Goodbye!')
+
+
+def list_entries():
+    print('Listing ...')
+
+
+def add_entry():
+    print('Adding ...')
 
 main()
 
