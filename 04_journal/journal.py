@@ -1,7 +1,17 @@
+"""
+This is the journal module.
+"""
+
 import os
 
 
 def load(name):  # load journal
+    """
+    This method creates and loads a enw journal.
+
+    :param name: This is base name of journal to load.
+    :return: A new journal data structure popilated with the file data.
+    """
     data = []
     filename = get_full_pathname(name)
     print('filename: ' + str(filename))
