@@ -36,14 +36,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="5385" />
+          <entry key="py" value="5659" />
           <entry key="txt" value="124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="124" />
-          <entry key="Python" value="5385" />
+          <entry key="Python" value="5659" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -78,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/03_birthday/program.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="73" lean-forward="true" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+              <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
               <folding>
                 <marker date="1533992216721" expanded="true" signature="36:161" ph="..." />
                 <marker date="1533992216721" expanded="true" signature="769:774" ph="..." />
@@ -91,11 +91,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/05_weather_client/program.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="226">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
               <folding>
-                <marker date="1534814605978" expanded="true" signature="11:16" ph="..." />
-                <marker date="1534814605978" expanded="true" signature="548:667" ph="..." />
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1534968053353" expanded="true" signature="526:860" ph="..." />
               </folding>
             </state>
           </provider>
@@ -200,7 +200,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -367,7 +367,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="788" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24945612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -456,7 +455,7 @@
     <entry file="file://$PROJECT_DIR$/03_birthday/program.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="73" lean-forward="true" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
           <folding>
             <marker date="1533992216721" expanded="true" signature="36:161" ph="..." />
             <marker date="1533992216721" expanded="true" signature="769:774" ph="..." />
@@ -467,11 +466,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/05_weather_client/program.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="226">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
           <folding>
-            <marker date="1534814605978" expanded="true" signature="11:16" ph="..." />
-            <marker date="1534814605978" expanded="true" signature="548:667" ph="..." />
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1534968053353" expanded="true" signature="526:860" ph="..." />
           </folding>
         </state>
       </provider>
