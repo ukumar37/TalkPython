@@ -37,9 +37,33 @@ def get_html_from_web(zip_code):
 
 
 def get_weather_from_html(html):
-    soup = bs4.BeautifulSoup(html)
-    print(soup)
 
+    # cityCss = '.region-content-header h1'
+    # weatherConditionCss = '.condition-icon'
+    # weatherTempCss = '.wu-unit-temperature.wu-value'
+    # weatherScaleCss = '.wu-unit-temperature.wu-label'
+
+    soup = bs4.BeautifulSoup(html, 'html.parser')
+    loc = soup.find(class_='region-content-header').find('h1').get_text()
+    condition = soup.find(class_='condition-icon').get_text()
+    temp = soup.find(class_='wu-unit-temperature').find(class_='wu-value').get_text()
+    scale = soup.find(class_='wu-unit-temperature').find(class_='wu-label').get_text()
+
+    loc = cleanup_text(loc)
+    condition = cleanup_text(condition)
+    temp = cleanup_text(temp)
+    scale = cleanup_text(scale)
+
+    print(loc, condition, temp, scale)
+
+
+def cleanup_text(text: str):
+    if not text:
+        return text
+
+    text = text.strip()
+
+    return text
 
 if __name__ == '__main__':  # always use this convention when calling main() method
     main()
