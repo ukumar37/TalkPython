@@ -1,5 +1,10 @@
 import requests
 import bs4
+import collections
+
+# Define/create a new type of collection called "WeatherReport"
+WeatherReport = collections.namedtuple('WeatherReport',
+                                       'cond, scale, temp, loc')
 
 def main():
     print_the_header()
@@ -8,9 +13,15 @@ def main():
 
     html = get_html_from_web(code)
 
-    get_weather_from_html(html)
+    report = get_weather_from_html(html)
 
     # display the forecast
+    print('The temp in {} is {} {} and {}.'.format(
+        report.loc,
+        report.temp,
+        report.scale,
+        report.cond
+    ))
 
 
 def print_the_header():
@@ -54,7 +65,10 @@ def get_weather_from_html(html):
     temp = cleanup_text(temp)
     scale = cleanup_text(scale)
 
-    print(loc, condition, temp, scale)
+    # print(loc, condition, temp, scale)
+    # return loc, condition, temp, scale
+    report = WeatherReport(cond=condition, temp=temp, scale=scale, loc=loc)
+    return report
 
 
 def cleanup_text(text: str):
