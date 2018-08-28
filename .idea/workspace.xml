@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d396c31f-e47e-46e4-8a06-0efc4f0e73d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/TalkPython.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TalkPython.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06_locat_factory/program.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,26 +25,26 @@
         <counts>
           <entry key="jrl" value="2" />
           <entry key="md" value="1" />
-          <entry key="py" value="8" />
+          <entry key="py" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="8" />
+          <entry key="Python" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="6846" />
+          <entry key="py" value="7741" />
           <entry key="txt" value="124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="124" />
-          <entry key="Python" value="6846" />
+          <entry key="Python" value="7741" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -90,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/05_weather_client/program.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="211">
@@ -98,6 +97,19 @@
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <marker date="1535326850797" expanded="true" signature="2142:2144" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/06_locat_factory/program.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="34" column="117" selection-start-line="34" selection-start-column="117" selection-end-line="34" selection-end-column="117" />
+              <folding>
+                <marker date="1535419254277" expanded="true" signature="22:27" ph="..." />
+                <marker date="1535419254277" expanded="true" signature="448:899" ph="..." />
               </folding>
             </state>
           </provider>
@@ -140,6 +152,7 @@
         <option value="$PROJECT_DIR$/04_journal/program2.py" />
         <option value="$PROJECT_DIR$/04_journal/program.py" />
         <option value="$PROJECT_DIR$/05_weather_client/program.py" />
+        <option value="$PROJECT_DIR$/06_locat_factory/program.py" />
       </list>
     </option>
   </component>
@@ -195,6 +208,11 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="05_weather_client" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
+            <path>
+              <item name="TalkPython" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="06_locat_factory" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -216,7 +234,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.program (4)">
+  <component name="RunManager" selected="Python.program">
     <configuration name="program (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TalkPython" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -301,7 +319,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="program2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="program" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TalkPython" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,11 +327,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/04_journal" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/06_locat_factory" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/04_journal/program2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/06_locat_factory/program.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -325,17 +343,17 @@
     <list>
       <item itemvalue="Python.program (2)" />
       <item itemvalue="Python.program (3)" />
-      <item itemvalue="Python.program2" />
       <item itemvalue="Python.program (4)" />
       <item itemvalue="Python.program (1)" />
+      <item itemvalue="Python.program" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.program" />
         <item itemvalue="Python.program (4)" />
         <item itemvalue="Python.program (1)" />
         <item itemvalue="Python.program (2)" />
         <item itemvalue="Python.program (3)" />
-        <item itemvalue="Python.program2" />
       </list>
     </recent_temporary>
   </component>
@@ -369,13 +387,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="788" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24945612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24945612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3275862" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3275862" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994253" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -473,6 +492,17 @@
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <marker date="1535326850797" expanded="true" signature="2142:2144" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06_locat_factory/program.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="34" column="117" selection-start-line="34" selection-start-column="117" selection-end-line="34" selection-end-column="117" />
+          <folding>
+            <marker date="1535419254277" expanded="true" signature="22:27" ph="..." />
+            <marker date="1535419254277" expanded="true" signature="448:899" ph="..." />
           </folding>
         </state>
       </provider>
