@@ -6,6 +6,7 @@ import collections
 WeatherReport = collections.namedtuple('WeatherReport',
                                        'cond, scale, temp, loc')
 
+
 def main():
     print_the_header()
 
@@ -48,7 +49,6 @@ def get_html_from_web(zip_code):
 
 
 def get_weather_from_html(html):
-
     # cityCss = '.region-content-header h1'
     # weatherConditionCss = '.condition-icon'
     # weatherTempCss = '.wu-unit-temperature.wu-value'
@@ -78,6 +78,7 @@ def cleanup_text(text: str):
     text = text.strip()
 
     return text
+
 
 if __name__ == '__main__':  # always use this convention when calling main() method
     main()
