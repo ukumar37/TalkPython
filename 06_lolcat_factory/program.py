@@ -36,11 +36,14 @@ def get_or_create_output_folder():
 
 
 def download_cats(folder):
+    print('contacting server to download cats ...')
     cat_count = 8  # get 8 cats only
     for i in range(1, cat_count + 1):
         name = 'lolcat {}'.format(i)
+        print('downloading cat ' + name)
         cat_service.get_cat(folder, name)
 
+    print('done')
 
 if __name__ == '__main__':  # only run the main method if it is being called from the program (i.e. not as a package)
     main()
