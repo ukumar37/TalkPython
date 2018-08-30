@@ -1,4 +1,6 @@
 import os
+import subprocess
+
 import cat_service
 
 
@@ -10,8 +12,7 @@ def main():
 
     download_cats(folder)
 
-    # download cats
-    # display cats
+    display_cats(folder)
 
 
 def print_header():
@@ -44,6 +45,12 @@ def download_cats(folder):
         cat_service.get_cat(folder, name)
 
     print('done')
+
+
+def display_cats(folder):
+    # open folder
+    print('displaying cats in OS window.')
+    subprocess.call(['open', folder])
 
 if __name__ == '__main__':  # only run the main method if it is being called from the program (i.e. not as a package)
     main()
