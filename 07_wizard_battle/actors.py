@@ -20,7 +20,7 @@ class Wizard:
             print("The wizard has handily triumphed over {}".format(creature.name))
             return True
         else:
-            print("The wizard has been DEFEATED!!!")
+            print("The wizard has been DEFEATED!!!!")
             return False
 
 
