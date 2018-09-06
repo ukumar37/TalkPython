@@ -1,8 +1,17 @@
+import random
+
 
 class Wizard:
     def __init__(self, name, level):  # initialize the class
         self.name = name  # once instantiated, give the object a name
         self.level = level  # once instantiated, give the object a level
+
+
+    def attack(self, creature):
+        print("The wizard {} attacks {}".format(self.name, creature.name))
+
+        my_roll = random.randint(1, 12) * self.level
+
 
 
 class Creature:
