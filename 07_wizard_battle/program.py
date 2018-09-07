@@ -19,14 +19,14 @@ def print_header():
 def game_loop():
 
     creatures = [  # Instantiate our creatures
-        Creature('Toad', 1),
+        #SmallAnimal('Toad', 1),
         Creature('Tiger', 12),
-        Creature('Bat', 3),
-        Creature('Dragon', 50),
-        Creature('Evil Wizard', 1000)
+        #SmallAnimal('Bat', 3),
+        #Dragon('Dragon', 50),
+        Wizard('Evil Wizard', 250)
     ]
 
-    # print(creatures)
+    # print(creatures)  # we can do this because we created the __repr__ method in class Creatures
 
     hero = Wizard('Gandolf', 75)  # Instantiate our hero
 
@@ -53,6 +53,11 @@ def game_loop():
                 print(' * A {} of level {}'.format(c.name, c.level))
         else:
             print('ok, exiting game ... bye')
+            break
+
+
+        if not creatures:
+            print('You defeated all the creatures, well done!!')
             break
 
         print("")
