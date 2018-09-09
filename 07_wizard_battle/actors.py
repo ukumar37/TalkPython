@@ -52,4 +52,17 @@ class Dragon(Creature):
 
         def get_defensive_roll(self):
             base_roll = super().get_defensive_roll()
+
+            #fire_modifier = None
+            #if self.breaths_fire:
+            #    fire_modifier = 5
+            #else:
+            #    fire_modifier = 1
+
+            fire_modifier = 5 if self.breaths_fire else 1  # lets give high level if dragon breaths fire
+            scale_modifier = self.scaliness / 10
+
+            return base_roll * fire_modifier * scale_modifier
+
+
         
