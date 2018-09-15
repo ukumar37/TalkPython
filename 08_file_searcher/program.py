@@ -8,7 +8,7 @@ def main():
         print("Sorry, we can't search that location.")
         return
 
-    text = get_search_text_from_user():
+    text = get_search_text_from_user()
     if not text:
         print("Sorry, we can't search for nothing!")
         return
@@ -24,7 +24,7 @@ def print_header():
 
 def get_folder_from_user():
     folder = input('What folder do you want to search?')
-    if not folder or folder.strip():
+    if not folder or not folder.strip():
         return None
 
     if not os.path.isdir(folder):
@@ -34,11 +34,12 @@ def get_folder_from_user():
 
 
 def get_search_text_from_user():
-    pass
+    text = input('What are you searching for [single phrases only]?')
+    return text
 
 
-def search_folder():
-    pass
+def search_folder(folder, text):
+    print('Would search {} for {}.'.format(folder, text))
 
 
 if __name__ == '__main__':
