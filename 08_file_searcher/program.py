@@ -35,7 +35,7 @@ def get_folder_from_user():
 
 def get_search_text_from_user():
     text = input('What are you searching for [single phrases only]?')
-    return text
+    return text.lower()
 
 
 def search_folder(folder, text):
@@ -50,6 +50,20 @@ def search_folder(folder, text):
 
         matches = search_file(full_item, text)  # if item is a file, search text in file
         all_matches.extend(matches)
+
+    return all_matches
+
+
+def search_file(filename, search_text):
+    matches = []
+    with open(filename, 'r', encoding= 'utf-8') as fin:
+
+        for line in fin:
+            if line.lower().find(search_text)  >=  0:
+                matches.append(line)
+
+        return matches
+
 
 if __name__ == '__main__':
     main()
