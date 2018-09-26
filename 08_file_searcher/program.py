@@ -55,11 +55,12 @@ def search_folder(folder, text):
 
     for item in items:
         full_item = os.path.join(folder, item)  # create full path name by joining folder and file
-        if os.path.isdir(full_item):  # if item is a directory, skip item
-            continue
-
-        matches = search_file(full_item, text)  # if item is a file, search text in file
-        all_matches.extend(matches)  # extend collection by adding new matches
+        if os.path.isdir(full_item):  # if item is a directory, use recursive technique to search sub-folder
+            matches = search_folder(full_item, text)
+            all_matches.extend(matches)
+        else:
+            matches = search_file(full_item, text)  # if item is a file, search text in file
+            all_matches.extend(matches)  # extend collection by adding new matches
 
     return all_matches
 
