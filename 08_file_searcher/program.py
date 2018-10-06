@@ -54,23 +54,25 @@ def get_search_text_from_user():
 
 
 def search_folder(folder, text):
-    all_matches = []  # create an empty collection
+    # all_matches = []  # create an empty collection
     items = os.listdir(folder)  # list all the files (items) in the given folder
 
     for item in items:
         full_item = os.path.join(folder, item)  # create full path name by joining folder and file
         if os.path.isdir(full_item):  # if item is a directory, use recursive technique to search sub-folder
             matches = search_folder(full_item, text)
-            all_matches.extend(matches)
+            # all_matches.extend(matches)
+            yield from matches  # generator method
         else:
             matches = search_file(full_item, text)  # if item is a file, search text in file
-            all_matches.extend(matches)  # extend collection by adding new matches
+            # all_matches.extend(matches)  # extend collection by adding new matches
+            yield from matches  # generator method
 
-    return all_matches
+    # return all_matches
 
 
 def search_file(filename, search_text):
-    matches = []
+    # matches = []
     # with open(filename, 'r', encoding='utf-8') as fin:
     with open(filename, 'r', encoding='latin-1') as fin:
 
@@ -79,9 +81,10 @@ def search_file(filename, search_text):
             line_num += 1
             if line.lower().find(search_text) >= 0:  # search text in the line within the file
                 m = SearchResult(line=line_num, file=filename, text=line)  # named tuple that stores values
-                matches.append(m)
+                # matches.append(m)
+                yield m  # generator method
 
-        return matches
+        # return matches
 
 
 if __name__ == '__main__':
