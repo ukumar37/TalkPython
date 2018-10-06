@@ -16,3 +16,24 @@ print("5! = {:,}, 3! = {:,}, 11! = {:,}".format(
     factorial(3),  # = 6
     factorial(11)  # some HUGE number
 ))
+
+
+# Fibonacci sequence
+# 1, 1, 2, 3, 5, 8, 13, ...
+
+def fibonacci(limit):
+    nums = []
+
+    current = 0
+    next = 1
+
+    while current < limit:
+        current, next = next, next + current
+        nums.append(current)
+
+    return nums
+
+
+# print(fibonacci(100))
+for n in fibonacci(100):
+    print(n, end=', ')
