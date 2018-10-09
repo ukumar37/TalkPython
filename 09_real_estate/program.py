@@ -6,7 +6,7 @@ def main():
     filename = get_data_file()
     print(filename)
     data = load_file(filename)
-    query_data(data)
+    query_data()
 
 
 def print_header():
@@ -22,8 +22,17 @@ def get_data_file():
                         'SacramentoRealEstateTransactions2008.csv')
 
 
-def load_data():
-    return []
+def load_file(filename):
+    with open(filename, 'r', encoding='utf-8') as fin:
+        header = fin.readline()
+        print('found header :' + header)
+
+        lines = []
+        for line in fin:
+            line_data = line.split(',')
+            lines.append(line_data)
+
+        print(lines[:5])
 
 
 def query_data():
