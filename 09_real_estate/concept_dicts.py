@@ -1,6 +1,8 @@
 
 
 # Below are multiple ways to create dictionaries
+import collections
+
 lookup = {}
 lookup = dict()
 lookup = {'age': 42, 'loc': 'Italy'}
@@ -29,3 +31,21 @@ lookup['cat'] = 'Fun code demos'
 
 if 'cat' in lookup:
     print(lookup['cat'])
+
+
+# Suppose there came from a data source like a database, web service, etc.
+# and we want to randomly access them
+
+User = collections.namedtuple('User', 'id, name, email')
+users = [
+    User(1, 'User1', 'user1@talkpython.fm'),
+    User(2, 'User2', 'user2@talkpython.fm'),
+    User(3, 'User3', 'user3@talkpython.fm'),
+    User(4, 'User4', 'user14@talkpython.fm')
+]
+
+lookup = dict()
+for u in users:
+    lookup[u.id] = u
+
+print(lookup[3])
