@@ -1,6 +1,8 @@
 import csv
 import os
 
+from data_types import Purchase
+
 
 def main():
     print_header()
@@ -27,9 +29,12 @@ def load_file(filename):
     with open(filename, 'r', encoding='utf-8') as fin:
 
         reader = csv.DictReader(fin)
+        purchases = []  # create an empty list
         for row in reader:
-            print(type(row), row)
-            print("Bed count = {}".format(row['beds']))
+            p = Purchase.create_from_dict(row)
+            purchases.append(p)
+
+        return purchases
 
         # header = fin.readline().strip()
         # reader = csv.reader(fin, delimiter=',')
