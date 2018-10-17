@@ -9,7 +9,7 @@ def main():
     filename = get_data_file()
     print(filename)
     data = load_file(filename)
-    query_data()
+    query_data(data)
 
 
 def print_header():
@@ -58,7 +58,27 @@ def load_file(filename):
 #         print(lines[:5])
 
 
-def query_data():
+#  def get_price(p):
+#      return p.price
+
+
+def query_data(data):
+
+    #  if data were sorted by price:
+    data.sort(key=lambda p: p.price)  # 'p' is the argument which
+
+    #  most expensive house
+    high_price = data[-1]
+    print('The most expensive house is ${:,} with {} beds and {} baths.'.format(high_price.price, high_price.beds,
+                                                                                high_price.baths))
+
+    #  least expensive house
+    low_price = data[0]
+    print('The least expensive house is ${:,} with {} beds and {} baths.'.format(low_price.price, low_price.beds,
+                                                                                 low_price.baths))
+
+    #  average price of house
+    #  average price of a 2-bedroom house
     pass
 
 
