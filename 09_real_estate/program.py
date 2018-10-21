@@ -79,21 +79,37 @@ def query_data(data):
                                                                                  low_price.baths))
 
     #  average price of house
-    prices = []  # create an empty list
-    for pur in data:
-        prices.append(pur.price)
+    # prices = []  # create an empty list
+    # for pur in data:
+    #    prices.append(pur.price)
+
+    prices = [
+        p.price  # projection or items
+        for p in data  # the set to process
+    ]
 
     mean_price = statistics.mean(prices)
     print("The average home price is ${:,}".format(int(mean_price)))
 
     #  average price of a 2-bedroom house
-    prices = []  # create an empty list
-    for pur in data:
-        if pur.beds ==2:
-            prices.append(pur.price)
+    # prices = []  # create an empty list
+    # for pur in data:
+    #     if pur.beds ==2:
+    #         prices.append(pur.price)
 
+    two_bed_homes = [
+        p  # projection or items
+        for p in data  # the set to process
+        if p.beds == 2  # test or condition
+    ]
+
+    average_price = statistics.mean([p.price for p in two_bed_homes])  # this concept is called "list comprehension"
+    average_baths = statistics.mean([p.baths for p in two_bed_homes])
+    average_sqft = statistics.mean([p.sq__ft  for p in two_bed_homes])
     mean_price = statistics.mean(prices)
-    print("The average home price of a 2 bedroom home is ${:,}".format(int(mean_price)))
+    print("The average 2 bedroom home is ${:,}, baths {}, and sq ft {:,}".format(int(mean_price),
+                                                                                 round(average_baths, 1),
+                                                                                 round(average_sqft, 1)))
 
 
 if __name__ == '__main__':
