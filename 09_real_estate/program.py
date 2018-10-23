@@ -97,19 +97,31 @@ def query_data(data):
     #     if pur.beds ==2:
     #         prices.append(pur.price)
 
-    two_bed_homes = [
+    two_bed_homes = (
         p  # projection or items
         for p in data  # the set to process
-        if p.beds == 2  # test or condition
-    ]
+        if announce(p, '2-bedrooms, found {}'.format(p.beds)) and p.beds == 2  # test or condition
+    )
 
-    average_price = statistics.mean([p.price for p in two_bed_homes])  # this concept is called "list comprehension"
-    average_baths = statistics.mean([p.baths for p in two_bed_homes])
-    average_sqft = statistics.mean([p.sq__ft  for p in two_bed_homes])
-    mean_price = statistics.mean(prices)
-    print("The average 2 bedroom home is ${:,}, baths {}, and sq ft {:,}".format(int(mean_price),
+    homes = []
+    for h in two_bed_homes:
+        if len(homes) > 5:
+            break
+        homes.append(h)
+
+
+    average_price = statistics.mean((announce(p.price, 'price') for p in homes))
+                                                        # this concept is called "list comprehension"
+    average_baths = statistics.mean((p.baths for p in homes))
+    average_sqft = statistics.mean((p.sq__ft for p in homes))
+    print("The average 2 bedroom home is ${:,}, baths {}, and sq ft {:,}".format(int(average_price),
                                                                                  round(average_baths, 1),
                                                                                  round(average_sqft, 1)))
+
+
+def announce(item, msg):
+    print("Pulling item {} for {}.".format(item, msg))
+    return item
 
 
 if __name__ == '__main__':
