@@ -16,15 +16,18 @@ def search_event_loop():
     search = 'ONCE_THROUGH_LOOP'
 
     while search != 'x':
-        search = input('Movie search text (x to exit): ')
-        if search != 'x':
-            results = movie_svc.find_movies(search)
-            print("Found {} results.".format(len(results)))
-            for r in results:
-                print('{} -- {}'.format(
-                    r.year, r.title
-                ))
-            print()
+        try:
+            search = input('Movie search text (x to exit): ')
+            if search != 'x':
+                results = movie_svc.find_movies(search)
+                print("Found {} results.".format(len(results)))
+                for r in results:
+                    print('{} -- {}'.format(
+                        r.year, r.title
+                    ))
+                print()
+        except:
+            print("YIKES that did not work!")
 
     print("Exiting ...")
 
